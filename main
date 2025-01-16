@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Old English Learning Tool</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    #infoTable {
+      position: absolute;
+      background: white;
+      border: 1px solid black;
+      padding: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Learn Old English Vocabulary</h1>
+  <p>Hover over the body parts to see vocabulary and grammatical forms.</p>
+  <div id="infoTable">
+    <table>
+      <tr><th>Case</th><th>Form</th></tr>
+      <tr><td>Nominative</td><td id="nom"></td></tr>
+      <tr><td>Accusative</td><td id="acc"></td></tr>
+      <tr><td>Dative</td><td id="dat"></td></tr>
+      <tr><td>Genitive</td><td id="gen"></td></tr>
+    </table>
+  </div>
+  <!-- Include the SVG -->
+  <object data="Low-Poly-Human-Male-Interactive.svg" type="image/svg+xml" id="svgObject" width="800"></object>
+  <script src="script.js"></script>
+</body>
+</html>
