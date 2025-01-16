@@ -34,11 +34,22 @@ svgObject.addEventListener('load', () => {
           infoTable.style.top = `${event.clientY + 10}px`;
           infoTable.style.left = `${event.clientX + 10}px`;
         }
+
+        // Highlight the hovered part
+        part.setAttribute('original-fill', part.getAttribute('fill')); // Store the original color
+        part.setAttribute('fill', '#FFD700'); // Highlight with gold color
+        part.setAttribute('stroke', '#FF8C00'); // Add an orange outline
+        part.setAttribute('stroke-width', '2'); // Increase outline thickness
       });
 
-      // Add a mouseout event listener to hide the table
+      // Add a mouseout event listener to hide the table and remove highlight
       part.addEventListener('mouseout', () => {
-        infoTable.style.display = 'none';
+        infoTable.style.display = 'none'; // Hide the table
+
+        // Remove the highlight and restore original styles
+        part.setAttribute('fill', part.getAttribute('original-fill')); // Restore original color
+        part.removeAttribute('stroke'); // Remove outline
+        part.removeAttribute('stroke-width'); // Remove outline thickness
       });
     }
   });
